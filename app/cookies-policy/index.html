@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/css/chatra.css" />
+<link rel="stylesheet" href="/them/3/css/main.css?v=1633523465" />
+<script type="7d0435b40919199a9f583063-application/javascript">!function (e, n, A) {
+            function o(e, n) {
+                return typeof e === n
+            }
+
+            function t() {
+                var e, n, A, t, a, i, l;
+                for (var f in r) if (r.hasOwnProperty(f)) {
+                    if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
+                    for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++) i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-"))
+                }
+            }
+
+            function a(e) {
+                var n = u.className, A = Modernizr._config.classPrefix || "";
+                if (c && (n = n.baseVal), Modernizr._config.enableJSClass) {
+                    var o = new RegExp("(^|\\\s)" + A + "no-js(\\s|$)");
+                    n = n.replace(o, "$1" + A + "js$2")
+                }
+                Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n)
+            }
+
+            function i(e, n) {
+                if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else {
+                    e = e.toLowerCase();
+                    var o = e.split("."), t = Modernizr[o[0]];
+                    if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr;
+                    n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n)
+                }
+                return Modernizr
+            }
+
+            var s = [], r = [], l = {
+                _version: "3.6.0",
+                _config: {classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0},
+                _q: [],
+                on: function (e, n) {
+                    var A = this;
+                    setTimeout(function () {
+                        n(A[e])
+                    }, 0)
+                },
+                addTest: function (e, n, A) {
+                    r.push({name: e, fn: n, options: A})
+                },
+                addAsyncTest: function (e) {
+                    r.push({name: null, fn: e})
+                }
+            }, Modernizr = function () {
+            };
+            Modernizr.prototype = l, Modernizr = new Modernizr;
+            var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase();
+            !function () {
+                var e = {}.hasOwnProperty;
+                f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) {
+                    return n in e && o(e.constructor.prototype[n], "undefined")
+                } : function (n, A) {
+                    return e.call(n, A)
+                }
+            }(), l._l = {}, l.on = function (e, n) {
+                this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () {
+                    Modernizr._trigger(e, Modernizr[e])
+                }, 0)
+            }, l._trigger = function (e, n) {
+                if (this._l[e]) {
+                    var A = this._l[e];
+                    setTimeout(function () {
+                        var e, o;
+                        for (e = 0; e < A.length; e++) (o = A[e])(n)
+                    }, 0), delete this._l[e]
+                }
+            }, Modernizr._q.push(function () {
+                l.addTest = i
+            }), Modernizr.addAsyncTest(function () {
+                function e(e, n, A) {
+                    function o(n) {
+                        var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e;
+                        i(e, a && o ? new Boolean(o) : o), A && A(n)
+                    }
+
+                    var t = new Image;
+                    t.onerror = o, t.onload = o, t.src = n
+                }
+
+                var n = [{
+                    uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
+                    name: "webp"
+                }, {
+                    uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
+                    name: "webp.alpha"
+                }, {
+                    uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
+                    name: "webp.animation"
+                }, {
+                    uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
+                    name: "webp.lossless"
+                }], A = n.shift();
+                e(A.name, A.uri, function (A) {
+                    if (A && "load" === A.type) for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri)
+                })
+            }), t(), a(s), delete l.addTest, delete l.addAsyncTest;
+            for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
+            e.Modernizr = Modernizr
+        }(window, document);</script>
+<title>Astromix - Yourlove</title>
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex, nofollow" />
+
+<script type="7d0435b40919199a9f583063-text/javascript">
+        function getGA()
+        {
+            var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
+            var raw = (match) ? decodeURIComponent(match[1]) : null;
+            if (raw)
+            {
+                match = raw.match(/(\d+\.\d+)$/);
+            }
+            var gacid = (match) ? match[1] : null;
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/ajax/initga/");
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send('ga='+gacid);
+            if (gacid)
+            {
+                return gacid;
+            }
+        }
+
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+            getGA();
+        })(window, document, 'script', 'dataLayer', 'GTM-NQVRRX7');
+    </script>
+<meta name="p:domain_verify" content="ddb821cc681ab409c79dec479e272fa9" />
+<meta property="og:title" content="Любовный гороскоп" />
+<meta property="og:type" content="product" />
+<meta property="product:price:amount" content="15.00" />
+<meta property="product:price:currency" content="USD" />
+</head>
+<body>
+
+<noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQVRRX7"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/js/jquery-inputmask/jquery.inputmask.bundle.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/js/lightbox2/js/lightbox.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/them/3/js/main2.min.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/them/2/js/select.lng.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/them/2/js/functions.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/them/2/js/home.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="/them/2/js/buy.js?v=202109141700" type="7d0435b40919199a9f583063-text/javascript"></script>
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-PSV25Z8" type="7d0435b40919199a9f583063-text/javascript"></script>
+<section class="menu-header bg-header ">
+<div class="menu">
+<div class="container">
+<div class="menu__wrap"><a class="menu__logo logo" href="#"><img src="/them/3/img/svg/logo.svg" alt="Astromix" /></a>
+</div>
+</div>
+</div>
+</section>
+<section class="description bg-header"><i class="fico fico-starB fico-starB--1"></i><i class="fico fico-starB fico-starB--2"></i><i class="fico fico-starB fico-starB--3"></i><i class="fico fico-starS fico-starS--1"></i><i class="fico fico-starS fico-starS--2"></i><i class="fico fico-starS fico-starS--3"></i><i class="fico fico-starS fico-starS--4"></i>
+<div class="container js-hide-content">
+<div class="description__wrapper">
+<h1 class="description__title title title--dark">ПОЛИТИКА ИСПОЛЬЗОВАНИЯ COOKIE-ФАЙЛОВ НА САЙТЕ ASTROMIX.NET</h1>
+<div class="description__text">
+<p>&nbsp;
+<h3 class="description__ttl title title--dark">ОПРЕДЕЛЕНИЕ</h3>
+</p>
+<p>Настоящий документ призван разъяснить, какие виды cookie-файлов ASTROMIX.NET может размещать на ваших устройствах при посещении страниц сайта.</p>
+<p><strong>Cookie </strong>&mdash; небольшая частица информации, которая передается сервером и размещается на компьютере пользователя. Каждый раз, когда вы пытаетесь открыть страницу соответствующего сайта, cookie-файлы, сохраненные в вашем браузере, посылают HTTP-запрос серверу этого сайта.</p>
+<p>На нашем сайте мы используем различные cookie, в том числе обязательные, функциональные, рекламные, а также cookie соцсетей. Куки облегчают процесс просмотра веб-страниц, позволяя сайту запоминать ваши действия и предпочтения (например, такие как выбор логина и региона проживания). Это значит, что вам не придется вводить эту информацию каждый раз, когда вы посещаете сайт или его страницы. Файлы cookie также хранят информацию о том, каким образом люди пользуются сайтом. К примеру, посещают ли они его впервые или являются его постоянными пользователями.</p>
+<p>&nbsp;
+<h3 class="description__ttl title title--dark">1. ТИПЫ COOKIE-ФАЙЛОВ</h3>
+</p>
+<p><strong>Существует четыре основных типа cookie:</strong></p>
+<p><strong>Сессионные cookie</strong> относятся к каждому отдельному посещению сайта и сохраняют информацию на время посещения веб-страниц, тем самым позволяя не вводить ваши данные повторно при переходе от страницы к странице или попытке совершить покупку. Сессионные cookie автоматически удаляются в течение короткого промежутка времени. Например, после того, как вы покидаете сайт или закрываете браузер.</p>
+<p><strong>Постоянные cookie</strong> запоминают определенную информацию о ваших предпочтениях при просмотре сайта, и позволяют ASTROMIX.NET распознавать вас при каждом его посещении. Постоянные cookie хранятся в кеше вашего браузера или мобильного устройства до тех пор, пока вы их не удалите. В ином случае, они удаляются автоматически, по истечении срока их действия.</p>
+<p><strong>Сторонние cookie</strong> &mdash; информационные файлы, размещенные в вашем браузере сторонними сервисами и приложениями, не имеющими отношения к ASTROMIX.NET. Они могут собирать данные о ваших действиях на различных сайтах и в течение многочисленных сессий. Обычно сторонние cookie &mdash; это разновидность постоянных cookie и хранятся в вашем браузере до тех пор, пока их не удалят или пока не истечет срок их действия.&nbsp;</p>
+<p><strong>Операционные cookie</strong></p>
+<p>Существуют cookie-файлы, которые нам приходится использовать для того, чтобы обеспечить работу определенных веб-страниц. В этом случае, размещение таких файлов на вашем устройстве не требует вашего разрешения. В частности, они включают:</p>
+<p>- cookie-файлы аутентификации;</p>
+<p>- технические cookies, необходимые для определенных информационных систем.</p>
+<p>Принимая такие файлы, вы принимаете соответствующую политику конфиденциальности.</p>
+<p>Cookie сохраняют информацию о вашей активности в сети интернет, однако они полезны, так как помогают нам улучшить работу ASTROMIX.NET и персонализировать ваш опыт взаимодействия с нашим сайтом. Вы можете выбрать настройки браузера, которые позволят вам принимать или отклонять cookie, в том числе сторонние файлы.</p>
+<p>&nbsp;
+<h3 class="description__ttl title title--dark">2. СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ COOKIE-ФАЙЛОВ И ЗАКОННЫЕ ИНТЕРЕСЫ GDPR</h3>
+</p>
+<p>Определенные технологии cookie используются для обеспечения функционирования сайта и предоставляются на основе вашего пользовательского соглашения с Astromix и ввиду необходимости предоставления запрашиваемых вами услуг. В частности, имеются в виду функции, необходимые для работы сайта, упомянутые выше.&nbsp;</p>
+<p>Наша EU/GDPR панель cookie демонстрирует баннер, созданный в соответствии с требованиями GDPR (Генеральным регламентом ЕС о защите персональных данных), который информирует вас о том, что наш сайт использует файлы cookie, и позволяет просмотреть нашу Политику Конфиденциальности. Баннер автоматически скроется, как только вы подтвердите, что согласны с нашими правилами.&nbsp;&nbsp;</p>
+<p>Продолжая пользоваться нашим сайтом после уведомления об использовании файлов cookie, оговоренных в вышеупомянутом документе, вы соглашаетесь с использованием нами этих файлов. Более подробно об этом можно прочитать в нашей Политике Конфиденциальности.&nbsp;</p>
+<p>&nbsp;
+<h3 class="description__ttl title title--dark">3. УПРАВЛЕНИЕ ВАШИМИ ПРЕДПОЧТЕНИЯМИ В ОТНОШЕНИИ ФАЙЛОВ COOKIE</h3>
+</p>
+<p><strong>Согласие или отказ на использование cookie в настройках браузера</strong></p>
+<p>Посещая сайт ASTROMIX.NET, вы можете изменить настройки браузера таким образом, чтобы они отражали ваши предпочтения в отношении файлов cookie. Расположение этих настроек может быть разным для разных браузеров, но обычно их можно найти в меню &ldquo;Настройки&rdquo; или &ldquo;Предпочтения&rdquo;.</p>
+<p>Если вы отказываетесь от использования или блокируете все файлы cookie в настройках браузера, вы не сможете в полной мере пользоваться функционалом&nbsp; ASTROMIX.NET, поскольку некоторые файлы cookie необходимы для нормальной работы сайта.&nbsp;</p>
+<p><strong>Согласие или отказ на использование cookie на мобильных и сторонних устройствах</strong></p>
+<p>Если вы пользуетесь сайтом Astromix на мобильном устройстве,&nbsp; вы можете также контролировать таргетированную рекламу на iOS или Android-устройствах.&nbsp;</p>
+<p>Если вы пользуетесь сторонними устройствами с доступом к сети интернет, такими как голосовые помощники или смарт-ТВ, обратитесь к производителю и/или провайдеру, чтобы узнать о возможности настройки отказа от использования cookie.</p>
+<p>&nbsp;
+<h3 class="description__ttl title title--dark">4. ОБРАТНАЯ СВЯЗЬ</h3>
+</p>
+<p>Если у вас возникли вопросы, свяжитесь с нами по электронной почте:</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="88f9c8e9fbfcfae7e5e1f0a6e6edfca6">[email&#160;protected]</a></p>
+<p>Или напишите нам по следующему адресу:&nbsp;</p>
+<p>VIVABELLE LIMITED,&nbsp;</p>
+<p>Montgomery Drive 17, Tavistock, PL19 8JX, Great Britain</p>
+<p>&nbsp;
+<p>Последняя версия 25 мая 2021 г.</p>
+</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer__wrap">
+<div class="footer__left footer__column">
+<div class="footer__logo"><img src="/img/svg/logo.svg" alt="Astromix" /></div>
+<p class="footer__copyright copyright">Astromix © 2018 – 2021<br /><br /><span style="font-weight: bold">© Vivabelle Limited</span></p>
+</div>
+<div class="footer__links links">
+<div class="links__col">
+<a class="links__item fzM" href="/term-of-use/">Пользовательское соглашение</a>
+<a class="links__item fzM" href="/privacy-policy/">Политика конфиденциальности</a>
+<a class="links__item fzM" href="/cookies-policy/">Использование cookies</a>
+</div>
+</div>
+<div class="footer__contacts contacts footer__column">
+<a class="contacts__email title" href="/cdn-cgi/l/email-protection#ef9eaf8e9c9b9d80828697c1818a9b"><span class="__cf_email__" data-cfemail="bccdfcddcfc8ced3d1d5c492d2d9c8">[email&#160;protected]</span></a>
+<br />
+<br />
+<img src="/img/visa.jpg" alt="visa" />
+<img src="/img/mastercard.jpg" alt="mastercard" />
+</div>
+</div>
+</div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="//code.jivosite.com/widget/foIp2i4rcd" async type="7d0435b40919199a9f583063-text/javascript"></script>
+<input type="hidden" id="ak" value="3b82d9f9a307a14312aafe29ffbc471234b1e9c966971159a710a4a101377cd3" />
+
+<script type="7d0435b40919199a9f583063-text/javascript">
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+
+            ttq.load('C1UGP9HLRI5O97LILAG0');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="7d0435b40919199a9f583063-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"699ee797ab7af210","version":"2021.9.0","r":1,"token":"f051b291d7434dc0865a41666a300b20","si":100}'></script>
+</body>
+</html>

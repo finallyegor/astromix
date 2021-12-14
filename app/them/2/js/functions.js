@@ -1,0 +1,1 @@
+$(document).ready(function(){var previewSlider=$('.js-preview-slider');if(previewSlider.length){previewSlider.slick({slidesToShow:1,slidesToScroll:1,dots:true,arrows:false,dotsClass:"slick-dots slick-dots--dark",variableWidth:true,infinite:false,initialSlide:0});}});function googleEvent(event,name){dataLayer.push({'event':event,'click_name':name});}

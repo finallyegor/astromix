@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="css/chatra.css" />
+<link rel="stylesheet" href="them/3/css/main.css" />
+<script type="application/javascript">
+    !function (e, n, A) {
+            function o(e, n) {
+                return typeof e === n
+            }
+
+            function t() {
+                var e, n, A, t, a, i, l;
+                for (var f in r) if (r.hasOwnProperty(f)) {
+                    if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
+                    for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++) i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-"))
+                }
+            }
+
+            function a(e) {
+                var n = u.className, A = Modernizr._config.classPrefix || "";
+                if (c && (n = n.baseVal), Modernizr._config.enableJSClass) {
+                    var o = new RegExp("(^|\\\s)" + A + "no-js(\\s|$)");
+                    n = n.replace(o, "$1" + A + "js$2")
+                }
+                Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n)
+            }
+
+            function i(e, n) {
+                if ("object" == typeof e) for (var A in e) f(e, A) && i(A, e[A]); else {
+                    e = e.toLowerCase();
+                    var o = e.split("."), t = Modernizr[o[0]];
+                    if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr;
+                    n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n)
+                }
+                return Modernizr
+            }
+
+            var s = [], r = [], l = {
+                _version: "3.6.0",
+                _config: {classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0},
+                _q: [],
+                on: function (e, n) {
+                    var A = this;
+                    setTimeout(function () {
+                        n(A[e])
+                    }, 0)
+                },
+                addTest: function (e, n, A) {
+                    r.push({name: e, fn: n, options: A})
+                },
+                addAsyncTest: function (e) {
+                    r.push({name: null, fn: e})
+                }
+            }, Modernizr = function () {
+            };
+            Modernizr.prototype = l, Modernizr = new Modernizr;
+            var f, u = n.documentElement, c = "svg" === u.nodeName.toLowerCase();
+            !function () {
+                var e = {}.hasOwnProperty;
+                f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) {
+                    return n in e && o(e.constructor.prototype[n], "undefined")
+                } : function (n, A) {
+                    return e.call(n, A)
+                }
+            }(), l._l = {}, l.on = function (e, n) {
+                this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () {
+                    Modernizr._trigger(e, Modernizr[e])
+                }, 0)
+            }, l._trigger = function (e, n) {
+                if (this._l[e]) {
+                    var A = this._l[e];
+                    setTimeout(function () {
+                        var e, o;
+                        for (e = 0; e < A.length; e++) (o = A[e])(n)
+                    }, 0), delete this._l[e]
+                }
+            }, Modernizr._q.push(function () {
+                l.addTest = i
+            }), Modernizr.addAsyncTest(function () {
+                function e(e, n, A) {
+                    function o(n) {
+                        var o = n && "load" === n.type ? 1 == t.width : !1, a = "webp" === e;
+                        i(e, a && o ? new Boolean(o) : o), A && A(n)
+                    }
+
+                    var t = new Image;
+                    t.onerror = o, t.onload = o, t.src = n
+                }
+
+                var n = [{
+                    uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
+                    name: "webp"
+                }, {
+                    uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
+                    name: "webp.alpha"
+                }, {
+                    uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
+                    name: "webp.animation"
+                }, {
+                    uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
+                    name: "webp.lossless"
+                }], A = n.shift();
+                e(A.name, A.uri, function (A) {
+                    if (A && "load" === A.type) for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri)
+                })
+            }), t(), a(s), delete l.addTest, delete l.addAsyncTest;
+            for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
+            e.Modernizr = Modernizr
+        }(window, document);
+    </script>
+<title>Astromix - Yourlove</title>
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<script type="text/javascript">
+        function getGA()
+        {
+            var match = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
+            var raw = (match) ? decodeURIComponent(match[1]) : null;
+            if (raw)
+            {
+                match = raw.match(/(\d+\.\d+)$/);
+            }
+            var gacid = (match) ? match[1] : null;
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/ajax/initga/");
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send('ga='+gacid);
+            if (gacid)
+            {
+                return gacid;
+            }
+        }
+
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+            getGA();
+        })(window, document, 'script', 'dataLayer', 'GTM-NQVRRX7');
+    </script>
+<meta name="p:domain_verify" content="ddb821cc681ab409c79dec479e272fa9" />
+<meta property="og:title" content="Любовный гороскоп" />
+<meta property="og:type" content="product" />
+<meta property="product:price:amount" content="15.00" />
+<meta property="product:price:currency" content="USD" />
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" type="text/javascript"></script>
+<script src="/js/jquery-inputmask/jquery.inputmask.bundle.js?v=202109141700" type="text/javascript"></script>
+<script src="/js/lightbox2/js/lightbox.js" type="text/javascript"></script>
+<script src="/them/3/js/main2.min.js" type="text/javascript"></script>
+<script src="/them/2/js/select.lng.js" type="text/javascript"></script>
+<script src="/them/2/js/functions.js" type="text/javascript"></script>
+<script src="/them/2/js/home.js" type="text/javascript"></script>
+
+
+<section class="menu-header bg-header home-header">
+<div class="menu">
+<div class="container">
+<div class="menu__wrap"><a class="menu__logo logo" href="#"><img src="/them/3/img/svg/logo.svg" alt="Astromix" /></a>
+</div>
+</div>
+</div>
+</section>
+<header class="header bg-header bg-header-love-solo">
+<i class="fico fico-starB fico-starB--1"></i>
+<i class="fico fico-starB fico-starB--2"></i>
+<i class="fico fico-starB fico-starB--3"></i>
+<i class="fico fico-starS fico-starS--1"></i>
+<i class="fico fico-starS fico-starS--2"></i>
+<i class="fico fico-starS fico-starS--3"></i>
+<i class="fico fico-starS fico-starS--4"></i> <div class="container">
+<div class="header__top" id="free">
+<div class="header__left">
+<h1 class="header__title title">
+<span class="title--dark">Что ждет вас в любви?</span>
+<span class="typewrite" data-period="1000" data-type='["\u041a\u043e\u0433\u0434\u0430 \u0432\u044b \u0432\u044b\u0439\u0434\u0435\u0442\u0435 \u0437\u0430\u043c\u0443\u0436?","\u0413\u0434\u0435 \u0432\u044b \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u0442\u0435 \u043b\u044e\u0431\u043e\u0432\u044c?","\u041a\u0442\u043e \u0432\u0430\u0448 \u0438\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 \u043c\u0443\u0436\u0447\u0438\u043d\u0430?","\u041a\u0440\u0430\u0445 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0439 \u0438 \u0440\u0430\u0437\u0432\u043e\u0434?"]'>
+<span class="wrap">Когда вы выйдете замуж?</span>
+</span>
+</h1>
+<div class="header__desc">
+<p class="interview__ttl title">Получите ответы в любовном гороскопе</p>
+</div>
+</div>
+<picture>
+<source media="(max-width: 479px)" srcset="/img/horoscope_pdf_love_solo.png" />
+<source srcset="/img/horoscope_pdf_love_solo.webp" type="image/webp" />
+<img class="header__img" src="/img/horoscope_pdf_love_solo.png" alt="pdf" />
+</picture>
+<a class="btn btn--full header__btn" href="/mobile/">Получить гороскоп<i class="fico fico-arrowBtn"></i></a>
+</div>
+<form class="form order__form" id="new_freeform" action="/" method="post">
+<input type="hidden" name="Product" value="free">
+<div class="header__bottom">
+<input type="hidden" name="Step" id="Step" value="1">
+<input type="hidden" name="StepValid" id="StepValid" value="1">
+<div class="interview step1"><i class="fico fico-starB fico-starB--1"></i><i class="fico fico-starB fico-starB--2"></i><i class="fico fico-starS fico-starS--1"></i>
+<div class="interview__wrap">
+<div class="interview__proggress proggress">
+<div class="proggress__dot"></div>
+<div class="proggress__dot"></div>
+<div class="proggress__dot"></div>
+<div class="proggress__dot"></div>
+<div class="proggress__dot"></div>
+</div>
+<div class="interview__logo">
+<i class="fico fico-arrowBtn"></i><a class="logo" href="#"><img src="/them/3/img/svg/logo.svg" alt="Astromix" /></a></div>
+<div class="interview__content interview__content--1">
+<p class="interview__ttl title title--dark">
+<span class="color ">Введите свою дату рождения, чтобы узнать положение солнца на зодиакальной оси</span>
+</p>
+<p class="interview__text"></p>
+<div class="interview__form form">
+<div class="field_box">
+<div class="form__wrap" id="Date">
+<select class="form__select form__select--day select-css" id="Day" name="Day">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select class="form__select form__select--month select-css" id="Month" name="Month">
+<option value="1">Январь</option>
+<option value="2">Февраль</option>
+<option value="3">Март</option>
+<option value="4">Апрель</option>
+<option value="5">Май</option>
+<option value="6">Июнь</option>
+<option value="7">Июль</option>
+<option value="8">Август</option>
+<option value="9">Сентябрь</option>
+<option value="10">Октябрь</option>
+<option value="11">Ноябрь</option>
+<option value="12">Декабрь</option>
+</select>
+<select class="form__select form__select--year select-css" id="Year" name="Year">
+<option value="1900">1900</option>
+<option value="1901">1901</option>
+<option value="1902">1902</option>
+<option value="1903">1903</option>
+<option value="1904">1904</option>
+<option value="1905">1905</option>
+<option value="1906">1906</option>
+<option value="1907">1907</option>
+<option value="1908">1908</option>
+<option value="1909">1909</option>
+<option value="1910">1910</option>
+<option value="1911">1911</option>
+<option value="1912">1912</option>
+<option value="1913">1913</option>
+<option value="1914">1914</option>
+<option value="1915">1915</option>
+<option value="1916">1916</option>
+<option value="1917">1917</option>
+<option value="1918">1918</option>
+<option value="1919">1919</option>
+<option value="1920">1920</option>
+<option value="1921">1921</option>
+<option value="1922">1922</option>
+<option value="1923">1923</option>
+<option value="1924">1924</option>
+<option value="1925">1925</option>
+<option value="1926">1926</option>
+<option value="1927">1927</option>
+<option value="1928">1928</option>
+<option value="1929">1929</option>
+<option value="1930">1930</option>
+<option value="1931">1931</option>
+<option value="1932">1932</option>
+<option value="1933">1933</option>
+<option value="1934">1934</option>
+<option value="1935">1935</option>
+<option value="1936">1936</option>
+<option value="1937">1937</option>
+<option value="1938">1938</option>
+<option value="1939">1939</option>
+<option value="1940">1940</option>
+<option value="1941">1941</option>
+<option value="1942">1942</option>
+<option value="1943">1943</option>
+<option value="1944">1944</option>
+<option value="1945">1945</option>
+<option value="1946">1946</option>
+<option value="1947">1947</option>
+<option value="1948">1948</option>
+<option value="1949">1949</option>
+<option value="1950">1950</option>
+<option value="1951">1951</option>
+<option value="1952">1952</option>
+<option value="1953">1953</option>
+<option value="1954">1954</option>
+<option value="1955">1955</option>
+<option value="1956">1956</option>
+<option value="1957">1957</option>
+<option value="1958">1958</option>
+<option value="1959">1959</option>
+<option value="1960">1960</option>
+<option value="1961">1961</option>
+<option value="1962">1962</option>
+<option value="1963">1963</option>
+<option value="1964">1964</option>
+<option value="1965">1965</option>
+<option value="1966">1966</option>
+<option value="1967">1967</option>
+<option value="1968">1968</option>
+<option value="1969">1969</option>
+<option value="1970">1970</option>
+<option value="1971">1971</option>
+<option value="1972">1972</option>
+<option value="1973">1973</option>
+<option value="1974">1974</option>
+<option value="1975">1975</option>
+<option value="1976">1976</option>
+<option value="1977">1977</option>
+<option value="1978">1978</option>
+<option value="1979">1979</option>
+<option value="1980">1980</option>
+<option value="1981">1981</option>
+<option value="1982">1982</option>
+<option value="1983">1983</option>
+<option value="1984">1984</option>
+<option value="1985">1985</option>
+<option value="1986" selected="selected">1986</option>
+<option value="1987">1987</option>
+<option value="1988">1988</option>
+<option value="1989">1989</option>
+<option value="1990">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+<option value="2019">2019</option>
+<option value="2020">2020</option>
+<option value="2021">2021</option>
+</select>
+</div>
+<span class="form__error"></span>
+</div>
+<button id="form_step_3" class="btn btn--full form__btn to_next" data-step="2" data-stepvalid="2-1" type="button">Далее<i class="fico fico-arrowBtn"></i></button>
+</div>
+</div>
+<div class="interview__content interview__content--2">
+<img class="interview__sign sign_img" src="" alt="sign" />
+<p class="interview__ttl title title--dark">Солнце в знаке <span class="color sign_name"></span>
+</p>
+<p class="interview__text sign_text"></p>
+<div class="interview__form form">
+<button id="form_step_4" class="btn btn--full form__btn to_next" data-step="2-1" data-stepvalid="0" type="button">Далее<i class="fico fico-arrowBtn"></i></button>
+</div>
+<a class="interview__prev-link prev-link" data-step="1" href="#"><i class="fico fico-arrowBtn"></i><span class="prev-link__text title">Назад</span></a>
+</div>
+<div class="interview__content interview__content--3">
+<p class="interview__ttl title title--dark"><span class="color">Укажите место рождения, чтобы определить положение планет и их влияние</span></p>
+<p class="interview__text"></p>
+<div class="interview__form form">
+<div class="form__wrap-input">
+<div class="form__wrap-input location_box field_box">
+<select class="form__select form__select--city form__select--max js-select--loc" data-placeholder="Место рождения (Город)">
+<option></option>
+</select>
+<input type="hidden" name="autocomplete" value="" id="autocomplete">
+<input type="hidden" name="locality" value="" id="locality">
+<input type="hidden" name="administrative" value="" id="administrative">
+<input type="hidden" name="country" value="" id="country">
+<input type="hidden" name="lat" value="" id="lat">
+<input type="hidden" name="lng" value="" id="lng"> <span class="form__error"></span>
+</div>
+</div>
+<button id="form_step_5" class="btn btn--full form__btn to_next" data-step="3" data-stepvalid="4" type="button">Далее<i class="fico fico-arrowBtn"></i></button>
+</div>
+<a class="interview__prev-link prev-link" data-step="1" href="#"><i class="fico fico-arrowBtn"></i><span class="prev-link__text title">Назад</span></a>
+</div>
+<div class="interview__content interview__content--4">
+<p class="interview__ttl title title--dark"><span class="color">Введите время рождения, чтобы определить асцендент, дома и положение Луны</span></p>
+<p class="interview__text"></p>
+<div class="interview__form form">
+<div class="form__wrap-input field_box">
+<div class="timeBlock">
+<input class="form__input mask-time time-field " type="tel" name="Time" id="Time" placeholder="Время" required="required" value="" />
+</div>
+<span class="form__error"></span>
+</div>
+<div class="form__info" style="margin-top: 10px">
+<p class="form__text">Если Вы родились между 9:00 и 11:00 - напишите 10:00.</p>
+</div>
+<div class="form__info" style="margin-top: 0px; text-align: left;">
+<div class="form__checkbox checkbox form__ttl title title--dark">
+<label class="checkbox__label">Не знаю время рождения <input class="checkbox__input" type="checkbox" id="timeHelp" /><span class="checkbox__checkmark"><i class="fico fico-checkOrder"></i></span>
+</label>
+</div>
+</div>
+<div class="form__info timeHelper" style="margin-top: 10px; display: none;">
+<p class="form__text">Время рождения не оказывает критического влияния на гороскоп</p>
+</div>
+<button id="form_step_6" class="btn btn--full form__btn to_next" data-step="4" data-stepvalid="4-1" type="button">Далее<i class="fico fico-arrowBtn"></i></button>
+</div>
+<a class="interview__prev-link prev-link" data-step="2" href="#"><i class="fico fico-arrowBtn"></i><span class="prev-link__text title">Назад</span></a>
+</div>
+<div class="interview__content interview__content--5">
+<p class="interview__ttl title title--dark"><span class="color">Введите Ваши имя и пол.<br> Это поможет определить баланс энергии Инь и Янь</span></p>
+<p class="interview__text"></p>
+<div class="interview__form form">
+<div class="form__wrap-input field_box">
+<input class="form__input " type="text" name="Name" id="Name" placeholder="Как Вас зовут?" required="required" value="" />
+<span class="form__error"></span>
+</div>
+<div class="form__radio-btns field_box">
+<p class="form__text">Ваш пол:</p>
+<label class="radio">Женский <input class="radio__input" value="2" checked="checked" type="radio" name="Sex" /><span class="radio__checkmark"></span>
+</label>
+<label class="radio">Мужской <input class="radio__input" value="1" type="radio" name="Sex" /><span class="radio__checkmark"></span>
+</label>
+</div>
+<button id="form_step_2" class="btn btn--full form__btn to_next" data-step="4-1" data-stepvalid="2" type="button">Далее<i class="fico fico-arrowBtn"></i></button>
+</div>
+<a class="interview__prev-link prev-link" data-step="3" href="#"><i class="fico fico-arrowBtn"></i><span class="prev-link__text title">Назад</span></a>
+</div>
+<div class="interview__content interview__content--5-1">
+<p class="interview__ttl title title--dark">
+<span class="color">Хотите получить персональные рекомендации от нашего астролога?</span>
+</p>
+<p class="interview__text">Укажите свою почту, чтобы она могла вам написать</p>
+<div class="interview__form form">
+<div class="form__wrap-input field_box">
+<input class="form__input " type="email" name="Email" id="Email" placeholder="Email" value="" />
+<span class="form__error"></span>
+</div>
+<button style="margin-top: 20px" id="form_step_7" class="btn btn--full form__btn to_next" data-step="5" onclick="if (!window.__cfRLUnblockHandlers) return false; googleEvent('send_form','natalChart1')" type="button" data-cf-modified-861c76ebde8a71cc1d15588a-="">Открыть гороскоп<i class="fico fico-arrowBtn"></i></button>
+<div class="form__checkbox checkbox">
+<label class="checkbox__label">Принимаю <a class="checkbox__link" target="_blank" href="/term-of-use/">Пользовательское соглашение</a>
+<input class="checkbox__input" type="checkbox" checked="checked" /><span class="checkbox__checkmark"><i class="fico fico-checkOrder"></i></span>
+</label>
+</div>
+</div>
+<a class="interview__prev-link prev-link" data-step="4" href="#"><i class="fico fico-arrowBtn"></i><span class="prev-link__text title">Назад</span></a>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</header>
+<script src="/js/typewrite.js" type="text/javascript"></script>
+<div class="container">
+<div class="hr love_key">
+<div class="box">
+<img src="/img/svg/key.svg" alt="img">
+</div>
+</div>
+<br />
+<br />
+<br />
+<h2 class="info__title info__title--short title title--dark title--big">Что вы получаете?</h2>
+<p class="p-info center" style="margin-bottom: 40px; font-size: 25px;">Индивидуальный любовный гороскоп — расскажет про будущие любовные события, выявит возможные причины вашего одиночества и даст рекомендации как стать женственной и желанной</p>
+<div class="row" style="align-items:flex-end;">
+<div class="col-6 text_def" style="padding-bottom: 0px">
+<div class="row">
+<div class="col-3" style="text-align: center">
+<img src="/img/svg/lo1.svg">
+</div>
+<div class="col-9">
+<p class="h3">Как не быть одинокой и несчастной?</p>
+<p class="light">Почему у вас не складываются отношения и какие детские травмы привели к этому. Научитесь прорабатывать последствия этих травм и строить счастливые отношения</p>
+</div>
+</div>
+<div class="row">
+<div class="col-3" style="text-align: center">
+<img src="/img/svg/lo2.svg">
+</div>
+<div class="col-9">
+<p class="h3">Что вас ждет в любви?</p>
+<p class="light">В вашей натальной карте заложено ваше будущее. Наш астролог проанализирует события, которые могут произойти с вами и подготовит вероятность каждого из них.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-3" style="text-align: center">
+<img src="/img/svg/lo3.svg">
+</div>
+<div class="col-9">
+<p class="h3">Как привлечь мужчину мечты?</p>
+<p class="light">Низкий уровень энергии, сексуальная и сердечные чакры заблокированы — Вам сложно привлекать достойных мужчин! Мы хотим, чтобы женщины были счастливы и любимы. Мы подготовили персональным рекомендации, которые помогут прокачать женскую энергию и сексуальность.</p>
+</div>
+</div>
+</div>
+<div class="col-6" style="padding-bottom: 0px">
+<div style="border-bottom: 1px #c5a8cd solid;">
+<picture>
+<source media="(max-width: 479px)" srcset="/img/horoscope_pdf_love_solo.png" />
+<source srcset="/img/horoscope_pdf_love_solo.webp" type="image/webp" />
+<img style="position: relative; bottom: -2px;" src="/img/horoscope_pdf_love_solo.png" alt="pdf" />
+</picture>
+</div>
+<a class="btn btn--full horoscope__btn js-scroll" onclick="if (!window.__cfRLUnblockHandlers) return false; googleEvent('button_click','btn1_to_form_1');" href="#free" style="margin: 80px auto;" data-cf-modified-861c76ebde8a71cc1d15588a-="">Получить гороскоп<i class="fico fico-arrowBtn"></i></a>
+</div>
+</div>
+</div>
+<br />
+<br />
+<br /><section class="info love_solo_info" id="info">
+<div class="container">
+<h2 class="info__title info__title--short title title--dark title--big" style="margin-bottom: 50px">Как мы создаем ваш гороскоп</h2>
+<div class="info__steps js-steps-slider">
+<div class="step">
+<img src="/them/2/img/svg/love_list.svg" alt="img">
+<i class="fico fico-arrowStep"></i>
+<p class="step__text">Вы вносите информацию о себе</p>
+</div>
+<div class="step">
+<img src="/them/2/img/svg/love_planet.svg" alt="img">
+<i class="fico fico-arrowStep"></i>
+<p class="step__text">Анализируем карту звездного неба и положения планет в момент вашего рождения</p>
+</div>
+<div class="step">
+<img src="/them/2/img/svg/love_work.svg" alt="img">
+<i class="fico fico-arrowStep"></i>
+<p class="step__text">Астролог составляет гороскоп с персональными рекомендациями</p>
+</div>
+<div class="step">
+<img src="/them/2/img/svg/love_mail.svg" alt="img">
+<i class="fico fico-arrowStep"></i>
+<p class="step__text">Вы получаете гороскоп на электронную почту в течении 30 минут</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer__wrap">
+<div class="footer__left footer__column">
+<div class="footer__logo"><img src="/img/svg/logo.svg" alt="Astromix" /></div>
+<p class="footer__copyright copyright">Astromix © 2018 – 2021<br /><br /><span style="font-weight: bold">© Vivabelle Limited</span></p>
+</div>
+<div class="footer__links links">
+<div class="links__col">
+<a class="links__item fzM" href="/term-of-use/">Пользовательское соглашение</a>
+<a class="links__item fzM" href="/privacy-policy/">Политика конфиденциальности</a>
+<a class="links__item fzM" href="/cookies-policy/">Использование cookies</a>
+</div>
+</div>
+<div class="footer__contacts contacts footer__column">
+<a class="contacts__email title" href="/cdn-cgi/l/email-protection"><span class="__cf_email__" data-cfemail="136253726067617c7e7a6b3d7d7667">[email&#160;protected]</span></a>
+<br />
+<br />
+<img src="/img/visa.jpg" alt="visa" />
+<img src="/img/mastercard.jpg" alt="mastercard" />
+</div>
+</div>
+</div>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="//code.jivosite.com/widget/foIp2i4rcd" async type="text/javascript"></script>
+<input type="hidden" id="ak" value="3b82d9f9a307a14312aafe29ffbc471234b1e9c966971159a710a4a101377cd3" />
+
+<script type="text/javascript">
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+
+
+            ttq.load('C1UGP9HLRI5O97LILAG0');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="861c76ebde8a71cc1d15588a-|49" defer=""></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"699ee77e29c8f210","version":"2021.9.0","r":1,"token":"f051b291d7434dc0865a41666a300b20","si":100}'></script>
+</body>
+</html>
